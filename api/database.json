@@ -1,0 +1,49 @@
+{
+    "authors": [
+      {
+        "id": 1,
+        "name": "Angie Apple",
+        "email": "angie@apple.com"
+        
+    },
+    {
+        "id": 2,
+        "name": "Betty Blunt",
+        "email": "betty@blunt.com"
+      },
+      {
+        "id": 3,
+        "name": "Charlie Chucker",
+        "email": "charlie@chucker.com"
+      },
+      {
+        "id": 4,
+        "name": "Danny Drunkard",
+        "email": "danny@drunkard.com"
+      }
+    ],
+    "recipients": [
+      {
+        "id": 1,
+        "name": "Angie Apple",
+        "email": "angie@apple.com"
+        
+      },
+      {
+        "id": 2,
+        "name": "Betty Blunt",
+        "email": "betty@blunt.com"
+      },
+      {
+        "id": 3,
+        "name": "Charlie Chucker",
+        "email": "charlie@chucker.com"
+      },
+      {
+        "id": 4,
+        "name": "Danny Drunkard",
+        "email": "danny@drunkard.com"
+      }
+    ],
+    "sentLetters": []
+  }
