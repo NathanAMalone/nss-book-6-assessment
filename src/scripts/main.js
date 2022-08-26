@@ -5,14 +5,16 @@
     // event listener for stateChanged
     // render()
 
-import { fetchAuthors, fetchRecipients } from "./dataAccess.js";
+import { fetchAuthors, fetchRecipients, fetchSentLetters, fetchTopics } from "./dataAccess.js";
 import { PenPal } from "./penPal.js"
 
-export const mainContainer = document.querySelector("#container")
+const mainContainer = document.querySelector("#container")
 
 const render = () => {
     fetchAuthors()
     .then(() => fetchRecipients())
+    .then(() => fetchTopics())
+    .then(() => fetchSentLetters())
     .then(
         () => {
             mainContainer.innerHTML = PenPal()

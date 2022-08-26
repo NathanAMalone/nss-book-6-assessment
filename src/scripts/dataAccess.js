@@ -3,7 +3,10 @@
     // store data in application state to be able to convert into HTML
         // fetch authors(fetchAuthors), getauthors(getAuthors)
             // repeat for recipients and sentLetters
-import { mainContainer } from "./main.js"
+// in dataAccess, create SendLetter that will POST information to database.json
+
+const mainContainer = document.querySelector("#container")
+
 
 const applicationState = {
     authors: [],
@@ -53,4 +56,34 @@ export const fetchSentLetters = ()  => {
 
 export const getSentLetters = () => {
     return applicationState.sentLetters.map(sentLetter => ({...sentLetter}))
+}
+
+export const fetchTopics = ()  => {
+    return fetch(`${API}/topics`)
+        .then(response => response.json())
+        .then(
+            (topicsData) => {
+                applicationState.topics = topicsData
+            }
+        )
+}
+
+export const getTopics = () => {
+    return applicationState.topics.map(topic => ({...topic}))
+}
+
+export const sendLetter = (userSendLetter) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userSendLetter)
+    }
+
+    return fetch(`${API}/sentLetters`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+    })
 }

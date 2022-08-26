@@ -5,7 +5,7 @@
 }
 
 .button {
-    margin: 1rem 0 2rem 2rem;
+    margin: 2rem 0 2rem 0;
     padding: 0.5rem;
     background-color: rgb(227, 72, 72);
     color: lightgoldenrodyellow;
@@ -16,4 +16,61 @@
   box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
 
+}
+
+.letterDate {
+    font-size: small;
+    
+}
+
+.FindLetter {
+    background-color: aqua;
+    padding: 30px;
+    margin: 20px
+}
+
+.letterTopic {
+    background-color: bisque;
+    max-width: fit-content;
+    padding: 7px 10px 7px 10px;
+    border-radius: 30px;
+    border: 1px solid black;
+    box-shadow: 2px 4px 5px;
+}
+
+.letterIntro {
+    font-weight: bold;
+}
+
+.letterBody {
+    font-weight: bold;
+
+}
+
+.letterClosing {
+    font-weight: bold;
+
+}
+
+.topics_field{
+    font-size: large;
+}
+
+.radioTopicsFields {
+    margin: 40px 0px;
+}
+
+.authorField {
+    margin: 40px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.letterBodyInput {
+    padding-bottom: 150px;
+    
+}
+
+.letterAuthorField {
+    font-size: large;
 }
